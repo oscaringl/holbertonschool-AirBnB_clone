@@ -33,7 +33,7 @@ class BaseModel:
         super().__setattr__(name, value)
 
     def __str__(self):
-        """Description of the class [<class name>] (<self.id>) <self.__dict__>"""
+        """Description of the class class name self.id self.__dict__"""
         return "[{}] ({}) {}".format(self.__class__.__name__,
                                      self.id, self.__dict__)
 
