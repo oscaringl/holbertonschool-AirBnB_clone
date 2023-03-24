@@ -7,13 +7,14 @@ import models
 import shlex
 import re
 
+
 class HBNBCommand(cmd.Cmd):
     """Contain the commmanns of ours console."""
     prompt = '(hbnb) '
-    
+
     def precmd(self, line):
         return line.strip()
-    
+
     def emptyline(self):
         """If line is empty don't do anything."""
         pass
@@ -41,7 +42,8 @@ class HBNBCommand(cmd.Cmd):
                 print(obj.id)
 
     def do_show(self, line):
-        """Prints the string representation of an instance based on class name and id."""
+        """Prints the string representation of an instance
+         based on class name and id."""
         if len(line) == 0:
             print("** class name missing **")
         else:
@@ -81,8 +83,8 @@ class HBNBCommand(cmd.Cmd):
                 print("** class doesn't exist **")
 
     def do_all(self, line):
-        """Prints all string representation of all instances based or not on 
-        the class name. If the class doesn't exist will print to the screen."""
+        """Prints all string representation of all instances based or not on
+         the class name. If the class doesn't exist will print to the screen."""
         if len(line) == 0:
             print([str(v) for v in models.storage.all().values()])
         elif line not in models.class_dict:
