@@ -81,7 +81,7 @@ class TestBaseModel(unittest.TestCase):
         self.assertEqual(inst.number, 89)
 
     def test_datetime_attributes(self):
-        """Testing correct datetime assignation of created_at and updated_at."""
+        """Testing correct datetime assignation"""
         tic = datetime.now()
         inst1 = BaseModel()
         toc = datetime.now()
